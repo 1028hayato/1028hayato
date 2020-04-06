@@ -9,8 +9,7 @@ public class Task1 {
 		int a = sc.nextInt();
 		if(a > 10) {
 			System.out.println("値:" +  a);
-		}
-		if(a < 10) {
+		}else {
 			System.out.println("値:" +  a * 10);
 		}
 		sc.close();

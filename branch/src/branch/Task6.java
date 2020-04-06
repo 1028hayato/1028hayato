@@ -27,5 +27,6 @@ public class Task6 {
 			System.out.print(intNum + " -> unknown");
 			break;
 		}
+		sc.close();
 	}
 }

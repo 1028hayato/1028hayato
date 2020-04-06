@@ -10,9 +10,8 @@ public class Task2 {
 		if(a > 10) {
 			System.out.println("値:" +  a);
 		}else{
-			if(a < 10)
 				System.out.println("値:" + "0" + a);
-			sc.close();
 		}
+		sc.close();
 	}
 }

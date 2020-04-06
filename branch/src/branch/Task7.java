@@ -22,6 +22,9 @@ public class Task7 {
 		case "日曜":
 			System.out.println("日曜は休診です");
 			break;
+		default:
+			System.out.println("入力を確認してください");
 		}
+		sc.close();
 	}
 }
