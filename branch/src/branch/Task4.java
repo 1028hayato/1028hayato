@@ -7,7 +7,9 @@ public class Task4 {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		if(a <= 0 && b <= 0) {
+		System.out.println("numA:" + a);
+		System.out.println("numB:"+ b);
+		if(a <= 0 || b <= 0) {
 			System.out.println("正の整数を入力してください。");
 		}else if(a % b == 0) {
 			System.out.println("numBはnumAの約数です。");

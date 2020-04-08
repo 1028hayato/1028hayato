@@ -24,6 +24,7 @@ public class Task7 {
 			break;
 		default:
 			System.out.println("入力を確認してください");
+			break;
 		}
 		sc.close();
 	}
