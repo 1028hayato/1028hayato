@@ -6,8 +6,9 @@ public class Task5 {
 			for(int y =1; y <= 9; y++) {
 				int z = x * y;
 				System.out.print(" ");
-				if(10 > z)
+				if(10 > z) {
 					System.out.print(" ");
+				}
 				System.out.print(z);
 			}
 			System.out.println();
