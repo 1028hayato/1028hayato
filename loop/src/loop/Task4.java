@@ -14,7 +14,7 @@ public class Task4 {
 			}else if(num % i == 0 && i >= 2) {
 				System.out.print("," + i);
 			}
-			sc.close();
 		}
+		sc.close();
 	}
 }
