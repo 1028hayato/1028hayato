@@ -8,6 +8,7 @@ public class Task2 {
 		System.out.println(TriangleArea);
 	}
 	static double getTriangleArea(double num1,double num2) {
-		return num1 * num2 / 2;
+		return (double)Math.round(num1 * num2 / 2);
+		//三角形の面積を求める計算式
 	}
 }
