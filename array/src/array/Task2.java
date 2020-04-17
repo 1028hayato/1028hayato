@@ -2,19 +2,25 @@ package array;
 
 public class Task2 {
 	public static void main(String args[]) {
-		int[] numbers = {7,6,5,4,3,2,1};
-		for (int i = 0; i < numbers.length; i++) {
-			if (i <= 5) {
+		int[] numbers = new int[7];
+		for (int i = 1; i <= 7 ; i++) {
+			numbers[i-1] = i;
+			//配列に数字を代入
+		}
+		for (int i = numbers.length -1 ; i >= 0 ; i--) {
+			if (i >= 1) {
 				System.out.print(numbers[i] + ",");
 			}else{
 				System.out.println(numbers[i]);
+				//7～1の数字を出力
 			}
-			}
-		for (int a = numbers.length - 1; a >= 0; a--) {
-			if (a >= 1) {
-				System.out.print(numbers[a] + ",");
+		}
+		for (int i = 0; i < numbers.length; i++) {
+			if (i < numbers.length -1) {
+				System.out.print(numbers[i] + ",");
 			}else{
-				System.out.println(numbers[a]);
+				System.out.println(numbers[i]);
+				//1～7の数字を出力
 			}
 		}
 	}
