@@ -10,14 +10,14 @@ public class Person {
 
 	static int wallet;//課題2用のフィールド
 
-	Person(String name, int age){
+	public Person(String name, int age){
 		this.name = name;
 		this.age = age;
 	}
 
-	Person(){}
+	public Person(){}
 
-	Person(int num){
+	public Person(int num){
 		Person.wallet += num;
 	}
 
