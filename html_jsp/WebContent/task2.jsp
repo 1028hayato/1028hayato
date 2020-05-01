@@ -11,8 +11,9 @@
 <title>JSP TASK</title>
 </head>
 <body>
-<h1>125 - 15 =<%= substraction(125,15) %></h1>
-<h1>17 - 21 =<%= substraction(17,21) %></h1>
+    <h1>125 - 15 =<%= substraction(125, 15) %></h1>
+
+    <h1>17 - 21 =<%= substraction(17, 21) %></h1>
 
 </body>
 </html>
