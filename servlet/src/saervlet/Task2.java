@@ -15,19 +15,19 @@ import javax.servlet.http.HttpServletResponse;
 public class Task2 extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 response.setContentType("text/html; charset=UTF-8");
-		 PrintWriter out = response.getWriter();
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
 
-		 Date today = new Date();
-		 SimpleDateFormat sdf = new SimpleDateFormat("YYYY/MM/dd");
+		Date today = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("YYYY/MM/dd");
 
-		    out.println("<html>");
-		    out.println("<head>");
-		    out.println("<meta charset=UTF-8>");
-		    out.println("<title>ServletTask</title>");
-		    out.println("</head>");
-		    out.println("<body>");
-		    out.print("<h1>今日の日付:" + sdf.format(today) +"</h1>");
-		    out.println("</body></html>");
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<meta charset=UTF-8>");
+		out.println("<title>ServletTask</title>");
+		out.println("</head>");
+		out.println("<body>");
+		out.print("<h1>今日の日付:" + sdf.format(today) +"</h1>");
+		out.println("</body></html>");
 	}
 }

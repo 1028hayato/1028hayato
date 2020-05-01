@@ -13,17 +13,17 @@ import javax.servlet.http.HttpServletResponse;
 public class Task1 extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 response.setContentType("text/html; charset=UTF-8");
-		 PrintWriter out = response.getWriter();
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
 
-		    out.println("<html>");
-		    out.println("<head>");
-		    out.println("<meta charset=UTF-8>");
-		    out.println("<title>ServletTask</title>");
-		    out.println("</head>");
-		    out.println("<body>");
-		    out.println("<h1>Hello World</h1>");
-		    out.println("<p>初めてのサーブレット</p>");
-		    out.println("</body></html>");
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<meta charset=UTF-8>");
+		out.println("<title>ServletTask</title>");
+		out.println("</head>");
+		out.println("<body>");
+		out.println("<h1>Hello World</h1>");
+		out.println("<p>初めてのサーブレット</p>");
+		out.println("</body></html>");
 	}
 }

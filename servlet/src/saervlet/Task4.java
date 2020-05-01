@@ -17,7 +17,7 @@ public class Task4 extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 
-		String[] fortuns = {"大吉","中吉","小吉","末吉","凶","大凶"};
+		String[] fortuns = {"大吉", "中吉", "小吉", "末吉", "凶", "大凶"};
 		Random random = new Random();
 		String fortun = fortuns[random.nextInt(6)];
 
