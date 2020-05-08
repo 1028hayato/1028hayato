@@ -16,6 +16,5 @@
        out.println("<h1>" + fortunebean.getFortune() + "</h1>");
    }
 %>
-
 </body>
 </html>
