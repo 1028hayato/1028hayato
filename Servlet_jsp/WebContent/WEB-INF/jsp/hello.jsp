@@ -7,7 +7,7 @@
 <title>HelloJsp</title>
 </head>
 <body>
-   <h1>HelloJsp</h1>
+    <h1>HelloJsp</h1>
 
 </body>
 </html>

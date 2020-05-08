@@ -1,18 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@ page import="practice.FortuneBean" %>
+<%@ page import="practice.FortuneBean" %>
 <!DOCTYPE html>
 <html>
 <head>
-<% FortuneBean fortunebean =(FortuneBean)request.getAttribute("占う"); %>
+<% FortuneBean fortunebean =(FortuneBean)request.getAttribute("fortuneResult"); %>
 
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Fortne_Result</title>
 </head>
 <body>
 <%
-   out.println("<h1>↓" + fortunebean.getToday() + "↓</h1>");
-   out.println("<h1>" + fortunebean.getFortune() + "</h1>");
+       out.println("<h1>↓" + fortunebean.getToday() + "↓</h1>");
+   if(fortunebean != null){
+       out.println("<h1>" + fortunebean.getFortune() + "</h1>");
+   }
 %>
 
 </body>
