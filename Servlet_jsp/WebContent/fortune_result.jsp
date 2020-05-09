@@ -11,8 +11,9 @@
 </head>
 <body>
 <%
-       out.println("<h1>↓" + fortunebean.getToday() + "↓</h1>");
    if(fortunebean != null){
+       out.println("<h1>↓" + fortunebean.getToday() + "↓</h1>");
+
        out.println("<h1>" + fortunebean.getFortune() + "</h1>");
    }
 %>
