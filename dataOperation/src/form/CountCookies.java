@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 public class CountCookies extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html; charset=UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 
 		out.println("<html>");
@@ -32,11 +32,11 @@ public class CountCookies extends HttpServlet {
 			for(int i = 0; i < cookie.length; i++) {
 				if(cookie[i].getName().equals("visited")) {
 					visitedCookie = cookie[i];
+				}
 			}
-		}
 
-		if(visitedCookie != null) {
-			int visited = Integer.parseInt(visitedCookie.getValue()) + 1;
+			if(visitedCookie != null) {
+				int visited = Integer.parseInt(visitedCookie.getValue()) + 1;
 				out.println("<p>");
 				out.println(visited);
 				out.println("回目の訪問です。</p>");
@@ -44,23 +44,24 @@ public class CountCookies extends HttpServlet {
 				visitedCookie.setValue(Integer.toString(visited));
 				visitedCookie.setMaxAge(300);
 				response.addCookie(visitedCookie);
-		    }else{
-			    out.println("<p>初回の訪問です。</p>");
+			}else{
+				out.println("<p>初回の訪問です。</p>");
 
 				Cookie newCookie = new Cookie("visited", "1");
 				newCookie.setMaxAge(300);
 				response.addCookie(newCookie);
-				}
-		}else{
-		    out.println("<p>初回の訪問です。</p>");
+			}
 
-		    Cookie newCookie = new Cookie("visited", "1");
+		}else{
+			out.println("<p>初回の訪問です。</p>");
+
+			Cookie newCookie = new Cookie("visited", "1");
 			newCookie.setMaxAge(300);
 			response.addCookie(newCookie);
 		}
 
-			out.println("<a href=\"CountCookies\">画面を再訪問</a>");
+		out.println("<a href=\"CountCookies\">画面を再訪問</a>");
 
-			out.println("</body></html>");
-		}
+		out.println("</body></html>");
 	}
+}
