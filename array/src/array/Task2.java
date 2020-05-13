@@ -3,11 +3,12 @@ package array;
 public class Task2 {
 	public static void main(String args[]) {
 		int[] numbers = new int[7];
-		for (int i = 1; i <= 7 ; i++) {
-			numbers[i-1] = i;
+		int a = 7;
+		for (int i = 0; i < numbers.length ; i++) {
+			numbers[i]= a--;
 			//配列に数字を代入
 		}
-		for (int i = numbers.length -1 ; i >= 0 ; i--) {
+		for (int i = numbers.length -1; i >= 0 ; i--) {
 			if (i >= 1) {
 				System.out.print(numbers[i] + ",");
 			}else{

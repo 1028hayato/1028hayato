@@ -14,7 +14,7 @@ public class Task3 {
 			nums[i] = rnd.nextInt(10);
 			//0～9の乱数を配列に代入
 		}
-		for(int i = 0; i <	nums.length; i++) {
+		for(int i = 0; i < nums.length; i++) {
 			if(i < nums.length -1){
 				System.out.print(nums[i] + ",");
 			}else{
