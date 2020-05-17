@@ -23,13 +23,13 @@
         <p>
         <label>誕生日</label>
         <br>
-        <input type= "text" name="Birthday">
+        <input type= "text" name="birthDay">
         </p>
 
         <p>
         <label>年齢</label>
         <br>
-        <input type= "text" name="Age">
+        <input type= "text" name="AGE">
         </p>
 
         <p>

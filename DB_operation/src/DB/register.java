@@ -28,22 +28,23 @@ public class register extends HttpServlet {
 		out.println("<title>データベーステスト</title>");
 		out.println("</head>");
 		out.println("<body>");
+		out.println("</body></html>");
 
 		int id = Integer.parseInt(request.getParameter("ID"));
 
 		String name = request.getParameter("NAME");
 
-		Date birthday = Date.valueOf(request.getParameter("Birthday"));
+		Date birthday = Date.valueOf(request.getParameter("birthDay"));
 
-		int age = Integer.parseInt(request.getParameter("Age"));
+		int age = Integer.parseInt(request.getParameter("AGE"));
 
 		String driverName = "com.mysql.cj.jdbc.Driver";
 
-		String jdbcURL ="jdbc:mysql://localhost:3306/task1";
+		String jdbcURL = "jdbc:mysql://localhost:3306/task1";
 
-		String userID ="1028HAYATO";
+		String userID = "1028HAYATO";
 
-		String userPass ="1990hayato";
+		String userPass = "1990hayato";
 
 		Connection con = null;
 
