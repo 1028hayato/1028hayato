@@ -41,10 +41,10 @@ public class DeleteEmployee extends HttpServlet {
 
 		Connection con = null;
 
-		try {
-			Class.forName(driverName);
+        try {
+            Class.forName(driverName);
 
-			con = DriverManager.getConnection(jdbcURL, userID, userPass);
+            con = DriverManager.getConnection(jdbcURL, userID, userPass);
 
 			String sql = "DELETE FROM employee WHERE id = ?";
 			PreparedStatement pstmt = con.prepareStatement(sql);

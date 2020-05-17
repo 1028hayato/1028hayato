@@ -9,11 +9,11 @@ public class ConnectDB {
 	public static void main(String[] args) throws Exception {
 		String driverName = "com.mysql.cj.jdbc.Driver";
 
-		String jdbcURL ="jdbc:mysql://localhost:3306/task1";
+		String jdbcURL = "jdbc:mysql://localhost:3306/task1";
 
-		String userID ="1028HAYATO";
+		String userID = "1028HAYATO";
 
-		String userPass ="1990hayato";
+		String userPass = "1990hayato";
 
 		Connection con = null;
 
