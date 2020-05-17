@@ -36,36 +36,34 @@ public class search extends HttpServlet {
 		ResultSet rs = null;
 
 		try {
-			Class.forName(driverName);
+            Class.forName(driverName);
 
-			con = DriverManager.getConnection(jdbcURL, userID, userPass);
+            con = DriverManager.getConnection(jdbcURL, userID, userPass);
 
-			String sql = "SELECT * from employee where name like ?";
-			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, "%" + name + "%");
+            String sql = "SELECT * from employee where name like ?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, "%" + name + "%");
 
-			rs = pstmt.executeQuery();
+            rs = pstmt.executeQuery();
 
-			PrintWriter out = response.getWriter();
+            PrintWriter out = response.getWriter();
 
-			out.println("<html>");
-			out.println("<head>");
-			out.println("<title>データベーステスト</title>");
-			out.println("</head>");
-			out.println("<body>");
-			out.println("<p>検索結果</p>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>データベーステスト</title>");
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<p>検索結果</p>");
 
-		while (rs.next()) {
-		    out.println("<p>ID:" + rs.getInt("id") + "</p>");
-			out.println("<p>名前:" + rs.getString("name") + "</p>");
-			out.println("<p>生年月日:" + rs.getDate("birthday") + "</p>");
-			out.println("<p>年齢:" + rs.getInt("age") + "</p>");
-		}
+         while (rs.next()) {
+            out.println("<p>ID:" + rs.getInt("id") + "</p>");
+            out.println("<p>名前:" + rs.getString("name") + "</p>");
+            out.println("<p>生年月日:" + rs.getDate("birthday") + "</p>");
+          }
 
-			rs.close();
-			pstmt.close();
-			out.println("</body></html>");
-
+            rs.close();
+            pstmt.close();
+            out.println("</body></html>");
 
 		}catch (ClassNotFoundException e){
 			e.printStackTrace();
