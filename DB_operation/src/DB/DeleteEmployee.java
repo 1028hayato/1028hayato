@@ -13,10 +13,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 @WebServlet("/DeleteEmployee")
 public class DeleteEmployee extends HttpServlet {
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		request.setCharacterEncoding("UTF-8");
 
@@ -54,21 +54,21 @@ public class DeleteEmployee extends HttpServlet {
 
 			pstmt.close();
 
-		} catch (ClassNotFoundException e) {
+		}catch (ClassNotFoundException e){
 			e.printStackTrace();
 
-		} catch (SQLException e) {
+		}catch (SQLException e){
 			e.printStackTrace();
 
-		} catch (Exception e) {
+		}catch (Exception e) {
 			e.printStackTrace();
 
-		} finally {
+		}finally{
 			try {
-				if (con != null) {
+				if(con != null) {
 					con.close();
 				}
-			} catch (SQLException e) {
+			}catch (SQLException e){
 				e.printStackTrace();
 			}
 		}
