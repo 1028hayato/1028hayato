@@ -17,25 +17,25 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/search")
 public class search extends HttpServlet {
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html; charset=UTF-8");
-		request.setCharacterEncoding("UTF-8");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html; charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
 
-		String driverName = "com.mysql.cj.jdbc.Driver";
+        String driverName = "com.mysql.cj.jdbc.Driver";
 
-		String jdbcURL = "jdbc:mysql://localhost:3306/task1";
+        String jdbcURL = "jdbc:mysql://localhost:3306/task1";
 
-		String userID = "1028HAYATO";
+        String userID = "1028HAYATO";
 
-		String userPass = "1990hayato";
+        String userPass = "1990hayato";
 
-		String name = request.getParameter("NAME");
+        String name = request.getParameter("NAME");
 
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
 
-		try {
+        try {
             Class.forName(driverName);
 
             con = DriverManager.getConnection(jdbcURL, userID, userPass);
@@ -55,33 +55,33 @@ public class search extends HttpServlet {
             out.println("<body>");
             out.println("<p>検索結果</p>");
 
-         while (rs.next()) {
-            out.println("<p>ID:" + rs.getInt("id") + "</p>");
-            out.println("<p>名前:" + rs.getString("name") + "</p>");
-            out.println("<p>生年月日:" + rs.getDate("birthday") + "</p>");
-          }
+            while (rs.next()) {
+                out.println("<p>ID:" + rs.getInt("id") + "</p>");
+                out.println("<p>名前:" + rs.getString("name") + "</p>");
+                out.println("<p>生年月日:" + rs.getDate("birthday") + "</p>");
+            }
 
             rs.close();
             pstmt.close();
             out.println("</body></html>");
 
-		}catch (ClassNotFoundException e){
-			e.printStackTrace();
+        }catch (ClassNotFoundException e){
+            e.printStackTrace();
 
-		}catch (SQLException e){
-			e.printStackTrace();
+        }catch (SQLException e){
+            e.printStackTrace();
 
-		}catch (Exception e) {
-			e.printStackTrace();
+        }catch (Exception e) {
+            e.printStackTrace();
 
-		}finally{
-			try {
-				if(con != null) {
-					con.close();
-				}
-			}catch (SQLException e){
-				e.printStackTrace();
-			}
-		}
-	}
+        }finally{
+            try {
+                if(con != null) {
+                    con.close();
+                }
+            }catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
 }
