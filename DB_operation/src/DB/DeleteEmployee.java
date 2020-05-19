@@ -29,7 +29,7 @@ public class DeleteEmployee extends HttpServlet {
         out.println("<body>");
         out.println("</body></html>");
 
-        int id = Integer.parseInt(request.getParameter("ID"));
+        int id = Integer.parseInt(request.getParameter("id"));
 
         String driverName = "com.mysql.cj.jdbc.Driver";
 

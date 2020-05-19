@@ -11,7 +11,7 @@
         <p>
         <label>削除するID</label>
         <br>
-        <input type= "text" name="ID">
+        <input type= "text" name="id">
         </p>
 
         <p>

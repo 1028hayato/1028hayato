@@ -29,7 +29,7 @@ public class search extends HttpServlet {
 
         String userPass = "1990hayato";
 
-        String name = request.getParameter("NAME");
+        String name = request.getParameter("name");
 
         Connection con = null;
         PreparedStatement pstmt = null;

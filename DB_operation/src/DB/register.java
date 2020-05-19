@@ -30,13 +30,13 @@ public class register extends HttpServlet {
         out.println("<body>");
         out.println("</body></html>");
 
-        int id = Integer.parseInt(request.getParameter("ID"));
+        int id = Integer.parseInt(request.getParameter("id"));
 
-        String name = request.getParameter("NAME");
+        String name = request.getParameter("name");
 
         Date birthday = Date.valueOf(request.getParameter("birthDay"));
 
-        int age = Integer.parseInt(request.getParameter("AGE"));
+        int age = Integer.parseInt(request.getParameter("age"));
 
         String driverName = "com.mysql.cj.jdbc.Driver";
 

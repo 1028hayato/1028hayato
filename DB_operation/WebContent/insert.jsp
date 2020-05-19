@@ -11,13 +11,13 @@
         <p>
         <label>ID</label>
         <br>
-        <input type= "text" name="ID">
+        <input type= "text" name="id">
         </p>
 
         <p>
         <label>名前</label>
         <br>
-        <input type= "text" name="NAME">
+        <input type= "text" name="name">
         </p>
 
         <p>
@@ -29,7 +29,7 @@
         <p>
         <label>年齢</label>
         <br>
-        <input type= "text" name="AGE">
+        <input type= "text" name="age">
         </p>
 
         <p>

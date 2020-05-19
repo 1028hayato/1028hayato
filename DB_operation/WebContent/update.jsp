@@ -11,13 +11,13 @@
         <p>
         <label>ID</label>
         <br>
-        <input type= "text" name="ID">
+        <input type= "text" name="id">
         </p>
 
         <p>
         <label>名前</label>
         <br>
-        <input type= "text" name="NAME">
+        <input type= "text" name="name">
         </p>
 
         <p>
